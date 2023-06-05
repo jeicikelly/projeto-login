@@ -28,11 +28,11 @@ section#login{
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   overflow: hidden;
+   overflow: hidden; /* PARA A IMAGEM SE AJUSTAR À BORDA RADIUS */
 
    background-color: white;
    width: 250px;
-   height: 500px;
+   height: 520px;
    border-radius: 20px;
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.459);
 }
@@ -57,4 +57,74 @@ div#formulario > h1{
 div#formulario > p{
    font-size: 0.9em;
    text-align: justify;
+}
+
+form > div.campo{
+   background-color: #80AAAD;
+   border: 2PX SOLID #80AAAD ;
+   display: block;
+   width: 100%;
+   height: 40px;
+   border-radius: 8px;
+   margin: 5px 0px;
+}
+
+div.campo > label{
+   display: none;
+}
+
+div.campo > span{
+   color: #0B3B3D;
+   font-size: 2em;
+   width: 40px;
+   padding: 5px; 
+}
+
+div.campo > input{
+   background-color: #167579;
+   font-size: 1em;
+   /*largura*/
+   width: calc(100% - 44.4px); /* AQUI ELE FAZ UM CÁLCULO PARA USAR 100% DA LARGURA DO CAMPO MENOS O TAMANHO DO OUTRO ELEMENTO */
+   height: 100%;
+   border: 0px;
+   border-radius: 8px;
+   padding: 4px;
+   transform: translateY(-13px);
+   /* O TRANSLATE MUDA A POSIÇAO SEGUINDO OS EIXOS X-(HORIZONTAL); Y-(VERTICAL); Z-(DIAGONAL) */
+}
+div.campo > input:focus-within{
+   background-color: #fff;
+}
+
+form > input[type=submit]{
+   display: block;
+   font-size: 1em;
+   width: 100%;
+   height: 40px;
+   background-color: #0B3B3D;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer; /* COMO O CURSOR DO MOUSE VAI SE COMPORTAR QUANDO PASSAR NESSE ELEMENTO */
+}
+form > input[type=submit]:hover{
+   background-color: #167579;
+}
+
+form > a.botao{
+   display: block;
+   font-size: 1em;
+   text-align: center;
+   width: 100%;
+   height: 40px;
+   padding-top: 5px;
+   margin-top: 5px;
+   background-color: #fff;
+   color: #0B3B3D;
+   border-radius: 5px;
+   border: 1px solid #0B3B3D;
+   text-decoration: none;
+}
+form > a.botao:hover{
+   background-color: #167579;
 }
